@@ -20,7 +20,7 @@ function install_checkuser() {
     echo 'Instalando CheckUser...'
 
     git clone $url
-    cd CheckUser
+    cd CheckUserGL
 
     python3 setup.py install
 
@@ -48,7 +48,7 @@ function check_update() {
     fi
 
     echo 'Verificando atualizacoes...'
-    cd CheckUser
+    cd CheckUserGL
 
     git fetch --all
     git reset --hard origin/master
@@ -62,7 +62,7 @@ function check_update() {
 function uninstall_checkuser() {
     echo 'Desinstalando CheckUser...'
 
-    [[ -d CheckUser ]] && rm -rf CheckUser
+    [[ -d CheckUserGL ]] && rm -rf CheckUserGL
 
     [[ -f /usr/bin/checker ]] && {
         service check_user stop
@@ -70,10 +70,10 @@ function uninstall_checkuser() {
         rm /usr/bin/checker
     }
 
-    [[ -f /usr/local/bin/checkuser ]] && {
+    [[ -f /usr/local/bin/CheckUserGL ]] && {
         service check_user stop
-        /usr/local/bin/checkuser --remove-service
-        rm /usr/local/bin/checkuser
+        /usr/local/bin/CheckUserGL --remove-service
+        rm /usr/local/bin/CheckUserGL
     }
 }
 
