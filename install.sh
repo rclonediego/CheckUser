@@ -41,6 +41,23 @@ function install_checkuser() {
     read
 }
 
+
+function install_checkuser2() {
+    echo 'Iniciando CheckUser...'
+    cd CheckUser
+    clear
+    echo 'Digite a Porta desejada, padrao 5000.'
+    read -p 'Porta: ' -e -i 5000 port
+    checkuser --config-port $port --create-service
+    service check_user start
+
+    echo 'CheckUser instalado com sucesso.'
+    echo 'Execute: checkuser --help'
+    echo 'URL: http://'$(curl -s icanhazip.com)':'$port
+    read
+}
+
+
 function check_update() {
     if ! [ -d CheckUser ]; then
         echo 'CheckUser nao esta instalado.'
@@ -81,9 +98,11 @@ function console_menu() {
     clear
     echo 'CHECKUSER MENU'
     echo '[01] - Instalar CheckUser'
-    echo '[02] - Remover Porta CheckUser'
+    echo '[02] - Iniciar Settings CheckUser'
+    echo '[03] - Remover Service (PORTA) CheckUser'
     echo '--------------------------------'
-    echo '[03] - Atualizar CheckUser'
+    echo '[04] - Atualizar CheckUser'
+    echo '[05] - Desinstalar CheckUser'
     echo '[00] - Sair'
 
     read -p 'Escolha uma opção: ' option
@@ -94,15 +113,19 @@ function console_menu() {
         console_menu
         ;;
     02 | 2)
+        install_checkuser2
+        console_menu
+        ;;
+    03 | 3)
         checkuser --remove-service
 	rm -rf CheckUser
         console_menu
         ;;
-    03 | 3)
+    04 | 4)
         check_update
         console_menu
         ;;
-    04 | 4)
+    05 | 5)
         uninstall_checkuser
         console_menu
         ;;
