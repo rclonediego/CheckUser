@@ -1,4 +1,4 @@
-url='https://github.com/WdsUtilidades/CheckUser'
+url='https://github.com/rclonediego/CheckUser'
 
 cd ~
 
@@ -22,7 +22,7 @@ function install_checkuser() {
     git clone $url
     cd CheckUser
 
-    python3 setup.py install
+    python setup.py install
 
     if ! [ -x "$(command -v checkuser)" ]; then
         echo 'Erro: CheckUser nao esta instalado.' >&2
@@ -71,7 +71,7 @@ function check_update() {
     git reset --hard origin/master
     git pull origin master
 
-    python3 setup.py install
+    python setup.py install
     echo 'CheckUser atualizado com sucesso.'
     read
 }
