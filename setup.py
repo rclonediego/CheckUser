@@ -8,7 +8,7 @@ VERSION = __version__
 DESCRIPTION = open('README.md').read()
 AUTHOR = __author__
 AUTHOR_EMAIL = __email__
-URL = 'https://github.com/WdsUtilidades/CheckUser'
+URL = 'https://github.com/rclonediego/CheckUser'
 LICENSE = 'MIT'
 
 setup(name='CheckerUser',
