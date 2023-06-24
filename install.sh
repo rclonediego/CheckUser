@@ -83,6 +83,7 @@ function console_menu() {
     echo '[01] - Instalar CheckUser'
     echo '[02] - Atualizar CheckUser'
     echo '[03] - Desinstalar CheckUser'
+    echo '[04] - Desinstalar CheckUser'
     echo '[00] - Sair'
 
     read -p 'Escolha uma opção: ' option
@@ -98,6 +99,12 @@ function console_menu() {
         ;;
     03 | 3)
         uninstall_checkuser
+        console_menu
+        ;;
+    04 | 4)
+        checkuser --remove-service
+		rm -rf install.sh
+		rm -rf CheckUser
         console_menu
         ;;
     00 | 0)
