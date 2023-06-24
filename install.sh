@@ -70,10 +70,10 @@ function uninstall_checkuser() {
         rm /usr/bin/checker
     }
 
-    [[ -f /usr/local/bin/CheckUserGL ]] && {
+    [[ -f /usr/local/bin/checkuser ]] && {
         service check_user stop
-        /usr/local/bin/CheckUserGL --remove-service
-        rm /usr/local/bin/CheckUserGL
+        /usr/local/bin/checkuser --remove-service
+        rm /usr/local/bin/checkuser
     }
 }
 
