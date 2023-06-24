@@ -1,4 +1,4 @@
-url='https://github.com/alfainternet/CheckUser'
+url='https://github.com/WdsUtilidades/CheckUserGL'
 
 cd ~
 
