@@ -8,10 +8,10 @@ VERSION = __version__
 DESCRIPTION = open('README.md').read()
 AUTHOR = __author__
 AUTHOR_EMAIL = __email__
-URL = 'https://github.com/WdsUtilidades/CheckUserGL'
+URL = 'https://github.com/WdsUtilidades/CheckUser'
 LICENSE = 'MIT'
 
-setup(name='CheckUserGL',
+setup(name='CheckerUser',
       version=VERSION,
       description=DESCRIPTION,
       author=AUTHOR,
