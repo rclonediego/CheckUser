@@ -11,7 +11,7 @@ AUTHOR_EMAIL = __email__
 URL = 'https://github.com/WdsUtilidades/CheckUserGL'
 LICENSE = 'MIT'
 
-setup(name='CheckerUser',
+setup(name='CheckUserGL',
       version=VERSION,
       description=DESCRIPTION,
       author=AUTHOR,
