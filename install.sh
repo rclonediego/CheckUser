@@ -1,4 +1,4 @@
-url='https://github.com/WdsUtilidades/CheckUserGL'
+url='https://github.com/WdsUtilidades/CheckUser'
 
 cd ~
 
@@ -20,7 +20,7 @@ function install_checkuser() {
     echo 'Instalando CheckUser...'
 
     git clone $url
-    cd CheckUserGL
+    cd CheckUser
 
     python3 setup.py install
 
@@ -48,7 +48,7 @@ function check_update() {
     fi
 
     echo 'Verificando atualizacoes...'
-    cd CheckUserGL
+    cd CheckUser
 
     git fetch --all
     git reset --hard origin/master
@@ -62,7 +62,7 @@ function check_update() {
 function uninstall_checkuser() {
     echo 'Desinstalando CheckUser...'
 
-    [[ -d CheckUserGL ]] && rm -rf CheckUserGL
+    [[ -d CheckUser ]] && rm -rf CheckUser
 
     [[ -f /usr/bin/checker ]] && {
         service check_user stop
