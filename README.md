@@ -23,7 +23,7 @@ apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/WdsUti
 apt-get update && apt-get install git -y
 ```
 ```
-python3 -m pip install git+https://github.com/WdsUtilidades/CheckUserGL.git
+python3 -m pip install git+https://github.com/WdsUtilidades/CheckUser.git
 ```
 
 ```
@@ -32,18 +32,18 @@ checkuser --create-service --config-port 5000 --start
 
 ### Ou
 ```
-curl -sL https://raw.githubusercontent.com/WdsUtilidades/CheckUserGL/main/install.sh > install.sh; chmod a+x install.sh; ./install.sh
+curl -sL https://raw.githubusercontent.com/WdsUtilidades/CheckUser/main/install.sh > install.sh; chmod a+x install.sh; ./install.sh
 ```
  *Opcao 1*
 
 # Atualização
 ```
-python3 -m pip install --upgrade git+https://github.com/WdsUtilidades/CheckUserGL.git
+python3 -m pip install --upgrade git+https://github.com/WdsUtilidades/CheckUser.git
 ```
 
 ### Ou
 ```
-curl -sL https://raw.githubusercontent.com/WdsUtilidades/CheckUserGL/master/install.sh > install.sh; chmod a+x install.sh; ./install.sh
+curl -sL https://raw.githubusercontent.com/WdsUtilidades/CheckUser/master/install.sh > install.sh; chmod a+x install.sh; ./install.sh
 ```
  *Opcao 2*
 
