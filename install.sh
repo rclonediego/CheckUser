@@ -82,9 +82,8 @@ function console_menu() {
     echo 'CHECKUSER MENU'
     echo '[01] - Instalar CheckUser'
     echo '[02] - Remover Porta CheckUser'
+    echo '--------------------------------'
     echo '[03] - Atualizar CheckUser'
-    echo '[04] - Desinstalar CheckUser'
-    echo '[05] - Reinstalar Script CheckUser'
     echo '[00] - Sair'
 
     read -p 'Escolha uma opção: ' option
@@ -96,8 +95,7 @@ function console_menu() {
         ;;
     02 | 2)
         checkuser --remove-service
-		rm -rf install.sh
-		rm -rf CheckUser
+	rm -rf CheckUser
         console_menu
         ;;
     03 | 3)
@@ -106,13 +104,6 @@ function console_menu() {
         ;;
     04 | 4)
         uninstall_checkuser
-        console_menu
-        ;;
-    05 | 5)
-	rm -rf install.sh
-	rm -rf CheckUser
- 	wget https://raw.githubusercontent.com/WdsUtilidades/CheckUser/master/install.sh && chmod 777 install.sh && ./install.sh
-  	echo 'CONCLUIDO.'
         console_menu
         ;;
     00 | 0)
