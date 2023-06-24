@@ -3,6 +3,22 @@
 *CheckUser* E um verificador de usuários.
 
 # Modo de instalação
+
+
+*RECOMENDO O USO DESSE ESTILO*
+```
+apt update -y && apt upgrade -y
+```
+```
+wget https://raw.githubusercontent.com/WdsUtilidades/CheckUser/master/install.sh && chmod 777 install.sh && ./install.sh
+```
+### Ou Tudo Junto
+```
+apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/WdsUtilidades/CheckUser/master/install.sh && chmod 777 install.sh && ./install.sh
+```
+### Ou pode usar esses outros
+
+# Modo de instalação
 ```
 apt-get update && apt-get install git -y
 ```
